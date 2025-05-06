@@ -1,0 +1,35 @@
+            <nav id="sidebar">
+               <div class="sidebar_blog_1">
+                  <div class="sidebar-header">
+                     <div class="logo_section ">
+                        <a href="index.html"><img class="logo_icon img-responsive" src="static/upload/{{ session['pic'] }}" alt="#" /></a>
+                     </div>
+                  </div>
+                  <div class="sidebar_user_info">
+                     <div class="icon_setting"></div>
+                     <div class="user_profle_side">
+                        <div class="user_img"><img class="img-responsive" src="static/upload/{{ session['pic'] }}" alt="#" /></div>
+                        <div class="user_info">
+                           <h6>{{ session['bank'] }}</h6>
+                           <p><span class="online_animation"></span> Online</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="sidebar_blog_2">
+                  <h4>SECURE INTRUSION DETECTION</h4>
+                  <ul class="list-unstyled components">
+                     
+					  <li><a href="/bank_home"><i class="fa fa-dashboard yellow_color"></i> <span>Home</span></a></li>
+                     <li><a href="/bank_user"><i class="fa fa-clock-o orange_color"></i> <span>User Details</span></a></li>
+                    
+                     <li><a href="/bank_account_info"><i class="fa fa-table purple_color2"></i> <span>Account Info</span></a></li>
+                     <li><a href="/bank_transaction"><i class="fa fa-paper-plane blue_color"></i> <span>Transaction</span></a></li>
+                     <li><a href="/bank_modified"><i class="fa fa-clone red_color"></i> <span>Modified</span></a></li>
+                     
+                     <li><a href="/"><i class="fa fa-briefcase blue1_color"></i> <span>Logout</span></a></li>
+                   
+                  
+                  </ul>
+               </div>
+            </nav>

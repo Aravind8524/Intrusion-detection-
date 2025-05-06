@@ -1,0 +1,42 @@
+            <nav id="sidebar">
+               <div class="sidebar_blog_1">
+                  <div class="sidebar-header">
+                     <div class="logo_section ">
+                        <a href="index.html"><img class="logo_icon img-responsive" src="static/upload/{{ session['pic'] }}" alt="#" /></a>
+                     </div>
+                  </div>
+                  <div class="sidebar_user_info">
+                     <div class="icon_setting"></div>
+                     <div class="user_profle_side">
+                        <div class="user_img"><img class="img-responsive" src="static/upload/{{ session['pic'] }}" alt="#" /></div>
+                        <div class="user_info">
+                           <h6>{{ session['username'] }}</h6>
+                           <p><span class="online_animation"></span> Online</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="sidebar_blog_2">
+                  <h4>SECURE INTRUSION DETECTION</h4>
+                  <ul class="list-unstyled components">
+                     
+					  <li><a href="/user_home"><i class="fa fa-dashboard yellow_color"></i> <span>Home</span></a></li>
+                     <li><a href="/user_create_account"><i class="fa fa-clock-o orange_color"></i> <span>Create Account</span></a></li>
+                     <li>
+                        <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Banking</span></a>
+                        <ul class="collapse list-unstyled" id="element">
+                           <li><a href="/user_deposit"> <span>Deposit</span></a></li>
+                           <li><a href="/user_withdraw"><span>Withdraw</span></a></li>
+                           <li><a href="/user_transcation"><span>Transaction</span></a></li>
+                           <li><a href="/user_received"> <span>Received</span></a></li>
+                           <li><a href="/user_mini_statement"> <span>Mini Statement</span></a></li>
+                        </ul>
+                     </li>
+                     <li><a href="/user_modified"><i class="fa fa-table purple_color2"></i> <span>Modified</span></a></li>
+                     
+                     <li><a href="/"><i class="fa fa-briefcase blue1_color"></i> <span>Logout</span></a></li>
+                   
+                  
+                  </ul>
+               </div>
+            </nav>

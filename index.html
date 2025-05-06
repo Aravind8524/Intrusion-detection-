@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title></title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- site icon -->
+      <link rel="icon" href="static/images/fevicon.png" type="image/png" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <!-- site css -->
+      <link rel="stylesheet" href="style.css" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="css/responsive.css" />
+      <!-- color css -->
+      <link rel="stylesheet" href="css/colors.css" />
+      <!-- select bootstrap -->
+      <link rel="stylesheet" href="css/bootstrap-select.css" />
+      <!-- scrollbar css -->
+      <link rel="stylesheet" href="css/perfect-scrollbar.css" />
+      <!-- custom css -->
+      <link rel="stylesheet" href="css/custom.css" />
+      <!-- calendar file css -->
+      <link rel="stylesheet" href="js/semantic.min.css" />
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+	  <style>
+	  {% include 'css/bootstrap.min.css' %} 
+	  {% include 'style.css' %} 
+	  {% include 'css/responsive.css' %} 
+	  {% include 'css/colors.css' %} 
+	  {% include 'css/bootstrap-select.css' %} 
+	  {% include 'css/perfect-scrollbar.css' %} 
+	  {% include 'css/custom.css' %} 
+	  
+	  </style>
+   </head>
+   <body class="inner_page login">
+    <script type="text/javascript">
+  //  function showPosition()
+	{
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(function(position){
+                var positionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
+                 {#document.getElementById("result").innerHTML = positionInfo;  #}
+                document.getElementById("lat").value = position.coords.latitude;
+                document.getElementById("lon").value = position.coords.longitude;
+            });
+        } else{
+            alert("Sorry, your browser does not support HTML5 geolocation.");
+        }
+    }
+</script>
+      <div class="full_container">
+         <div class="container">
+            <div class="center verticle_center full_height">
+               <div class="login_section">
+                  <div class="logo_login">
+                     <div class="center">
+                        <img width="210" src="static/images/logo/logo.png" alt="#" />
+                     </div>
+                  </div>
+                  <div class="login_form"> <h3 align="center">USER LOGIN</h3> <P></P>
+				   {% if msg %}
+                              <div class="alert alert-danger" role="alert">{{ msg }}</div>
+                           {% endif %}
+						     {% if data %}
+                              <div class="alert alert-success" role="alert">{{ data }}</div>
+                           {% endif %}
+                     <form  action="/user_login" method="post" name="form1" id="form1">
+					 <input type="hidden" name="textfield" id="lat">
+                       <input type="hidden" name="textfield2" id="lon">
+                        <fieldset>
+                           <div class="field">
+                              <label class="label_field">Email Id</label>
+                              <input type="text" name="uname" placeholder="Email Id"  required=""/>
+                           </div>
+                           <div class="field">
+                              <label class="label_field">Password</label>
+                              <input type="password" name="pass" placeholder="Password" required="" />
+                           </div>
+                        
+                           <div class="field margin_0">
+                              <label class="label_field hidden">hidden label</label>
+							  
+							   
+                              <button class="main_bt">Sing In</button>
+                           
+                           </div>
+						     
+						     <div class="field">
+                              <label class="label_field hidden">hidden label</label>
+                              <label class="form-check-label">   <a class="forgot" href="/user_register">New User ...</a></label>
+                              
+                               
+                           </div>
+						 <div class="tooltip_section">
+                                                <div align="center"><a class="btn btn-primary" href="/admin" data-toggle="tooltip" data-placement="top" title="Top">Admin Login</a>
+                                                  
+                                                    <a class="btn btn-success" href="/" data-toggle="tooltip" data-placement="left" title="Left">User Login</a>
+                                                    <a class="btn btn-danger" href="/bank_login" data-toggle="tooltip" data-placement="right" title="Right">Bank Login</a>
+                                                   </div>
+						 </div>
+						     
+							
+                        </fieldset> 
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- jQuery -->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <!-- wow animation -->
+      <script src="js/animate.js"></script>
+      <!-- select country -->
+      <script src="js/bootstrap-select.js"></script>
+      <!-- nice scrollbar -->
+      <script src="js/perfect-scrollbar.min.js"></script>
+      <script>
+         var ps = new PerfectScrollbar('#sidebar');
+      </script>
+      <!-- custom js -->
+      <script src="js/custom.js"></script>
+   </body>
+</html>

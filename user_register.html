@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title></title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- site icon -->
+      <link rel="icon" href="static/images/fevicon.png" type="image/png" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <!-- site css -->
+      <link rel="stylesheet" href="style.css" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="css/responsive.css" />
+      <!-- color css -->
+      <link rel="stylesheet" href="css/colors.css" />
+      <!-- select bootstrap -->
+      <link rel="stylesheet" href="css/bootstrap-select.css" />
+      <!-- scrollbar css -->
+      <link rel="stylesheet" href="css/perfect-scrollbar.css" />
+      <!-- custom css -->
+      <link rel="stylesheet" href="css/custom.css" />
+      <!-- calendar file css -->
+      <link rel="stylesheet" href="js/semantic.min.css" />
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+	  <style>
+	  {% include 'css/bootstrap.min.css' %} 
+	  {% include 'style.css' %} 
+	  {% include 'css/responsive.css' %} 
+	  {% include 'css/colors.css' %} 
+	  {% include 'css/bootstrap-select.css' %} 
+	  {% include 'css/perfect-scrollbar.css' %} 
+	  {% include 'css/custom.css' %} 
+	  
+	  </style>
+   </head>
+   <body class="inner_page login">
+      <div class="full_container">
+         <div class="container">
+            <div class="center verticle_center full_height">
+               <div class="login_section">
+                  <div class="logo_login">
+                     <div class="center">
+                        <img width="210" src="static/images/logo/logo.png" alt="#" />
+                     </div>
+                  </div>
+                  <div class="login_form"> <h3 align="center">USER LOGIN</h3> <P></P>
+				   {% if msg %}
+                              <div class="alert alert-danger" role="alert">{{ msg }}</div>
+                           {% endif %}
+						 
+                     <form  action="/user_register" method="post" enctype="multipart/form-data" name="form1" id="form1">
+                        <fieldset>
+                           <div class="field">
+                              <label class="label_field">Name</label>
+                              <input type="text" name="name" placeholder="Name"  required=""/>
+                           </div>
+						   <div class="field">
+                              <label class="label_field">Contact</label>
+                              <input type="text" name="contact" placeholder="Contact"   pattern="[6-9]{1}[0-9]{9}" title="Enter Valid contact"  required=""/>
+                           </div>
+						   <div class="field">
+                              <label class="label_field">Email</label>
+                              <input type="email" name="email" placeholder="E-mail"  required=""/>
+                           </div>
+						   <div class="field">
+                              <label class="label_field">Gender</label>
+                              <select name="select">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+                           </div>
+						   <div class="field">
+                              <label class="label_field">Address</label>
+                              <input type="text" name="address" placeholder="Address"  required=""/>
+                           </div>
+						   <div class="field">
+                              <label class="label_field">Aadhar Number</label>
+                              <input type="text" name="aadhar_number" placeholder="Aadhar Number"   pattern="[0-9]{12}" title="Enter Valid Aadhar"  required=""/>
+                           </div>
+						   
+						    <div class="field">
+                              <label class="label_field">PAN Number</label>
+                              <input type="text" name="pan_number" placeholder="PAN Number"   pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}"  title="Enter valid PAN (e.g., ABCDE1234F)" required=""/>
+                           </div>
+				        <div class="field">
+                              <label class="label_field">Image</label>
+                          
+                               <input type="file" name="file" required="">
+                         
+                          </div>
+						   
+                           <div class="field">
+                              <label class="label_field">Password</label>
+                              <input type="password" name="password" placeholder="Password" pattern="(?=.*[A-Z]).{8,}" title="Password must be at least 8 characters and contain at least one uppercase letter" required="" />
+                           </div>
+                        
+                           <div class="field margin_0">
+                              <label class="label_field hidden">hidden label</label>
+							  
+							   
+                              <button class="main_bt">Sing In</button>
+                           
+                           </div>
+						     
+						     <div class="field">
+                              <label class="label_field hidden">hidden label</label>
+                              <label class="form-check-label">   <a class="forgot" href="/user_register">New User ...</a></label>
+                              
+                               
+                           </div>
+						 <div class="tooltip_section">
+                                                <div align="center"><a class="btn btn-primary" href="/admin" data-toggle="tooltip" data-placement="top" title="Top">Admin Login</a>
+                                                  
+                                                    <a class="btn btn-success" href="/" data-toggle="tooltip" data-placement="left" title="Left">User Login</a>
+                                                    <a class="btn btn-danger" href="/bank_login" data-toggle="tooltip" data-placement="right" title="Right">Bank Login</a>
+                           </div>
+						 </div>
+						     
+							
+                        </fieldset> 
+                    </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- jQuery -->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <!-- wow animation -->
+      <script src="js/animate.js"></script>
+      <!-- select country -->
+      <script src="js/bootstrap-select.js"></script>
+      <!-- nice scrollbar -->
+      <script src="js/perfect-scrollbar.min.js"></script>
+      <script>
+         var ps = new PerfectScrollbar('#sidebar');
+      </script>
+      <!-- custom js -->
+      <script src="js/custom.js"></script>
+   </body>
+</html>
